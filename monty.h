@@ -1,6 +1,8 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+#define _POSIX_C_SOURCE 200809L
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -81,9 +83,8 @@ void instruct_rotr(stack_t **stack, unsigned int line);
 int check_isdigit(char *str);
 void set_queue(stack_t **stack, unsigned int line);
 void set_stack(stack_t **stack, unsigned int line);
-ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 int isascii(int c);
 int on_exit(void (*function)(int, void *), void *arg);
 
-
 #endif /* MONTY */
+
